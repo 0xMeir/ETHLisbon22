@@ -1,0 +1,29 @@
+{
+  "pipeline": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**"]
+    },
+    "build:preview": {
+      "cache": false,
+      "dependsOn": ["^build:preview"],
+      "outputs": ["dist/**"]
+    },
+    "build:crx": {
+      "dependsOn": ["^build:crx"],
+      "outputs": ["dist-crx/**"]
+    },
+    "test": {
+      "dependsOn": []
+    },
+    "test:e2e": {
+      "dependsOn": []
+    },
+    "dev": {
+      "cache": false
+    },
+    "dev:crx": {
+      "cache": false
+    }
+  }
+}

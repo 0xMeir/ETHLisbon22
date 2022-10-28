@@ -1,0 +1,7 @@
+{
+  "outputDirectory": "./packages/page/dist",
+  "github": {
+    "silent": true
+  },
+  "trailingSlash": true
+}
