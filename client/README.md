@@ -1,53 +1,46 @@
-[![build](https://github.com/FuelLabs/fuels-wallet/actions/workflows/gh-pages.yml/badge.svg)](https://github.com/FuelLabs/fuels-wallet/actions/workflows/gh-pages.yml)
-[![discord](https://img.shields.io/badge/chat%20on-discord-orange?&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/xfpK4Pe)
-![twitter](https://img.shields.io/twitter/follow/SwayLang?style=social)
+# Getting Started with Create React App
 
-## ⚡️ Fuel Wallet
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-The official wallet of the fastest modular execution layer: [Fuel](https://fuel.network/).
+## Available Scripts
 
-[![launch app button](docs/assets/launch-button.png)](https://fuellabs.github.io/fuels-wallet)
+In the project directory, you can run:
 
-The above button launches the latest stable version of Fuel Wallet. To launch the latest unstable version that includes all current changes from the master branch, click [here](https://fuels-wallet.vercel.app/).
+### `npm start`
 
-The above button launches the latest stable version of the Wallet.
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-## 📗 Table of contents
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-- [Features](#-fuels-wallet-features)
-- [Getting Started](./docs/GETTING_STARTED.md)
-  - [Requirements](./docs/GETTING_STARTED.md#requirements)
-  - [Running Project Locally](./docs/GETTING_STARTED.md#running-project-locally)
-    - [📚 - Getting the Repository](./docs/GETTING_STARTED.md#---getting-the-repository)
-    - [📦 - Install Dependencies](./docs/GETTING_STARTED.md#---install-dependencies)
-    - [📒 - Run Local Node](./docs/GETTING_STARTED.md#---run-local-node)
-    - [💻 - Run Web App](./docs/GETTING_STARTED.md#---run-web-app)
-  - [📗 Project Overview](./docs/GETTING_STARTED.md#-project-overview)
-  - [🧰 Useful Scripts](./docs/GETTING_STARTED.md#-useful-scripts)
-  - [Running Tests](./docs/GETTING_STARTED.md#running-tests)
-    - [Run Tests in Development Mode](./docs/GETTING_STARTED.md#run-tests-in-development-mode)
-    - [Run Tests on a Local Test Environment](./docs/GETTING_STARTED.md#run-tests-on-a-local-test-environment)
-- [Contribution Guide](./docs/CONTRIBUTING.md)
-  - [Finding Something to Work On](./docs/CONTRIBUTING.md#finding-something-to-work-on)
-  - [Contribution Flow](./docs/CONTRIBUTING.md#contribution-flow)
-- [License](#license)
+### `npm test`
 
-## 🧰 Features
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-- [x] Create a brand new and secure account
-- [x] Recover an account using a passphrase
-- [ ] Update account details
-- [x] Check your asset's balance
-- [ ] Manage networks
-- [ ] Reveal your passphrase
-- [ ] Change password
-- [ ] Faucet for testnet
-- [ ] See a list of your recent activities
-- [ ] View transaction details
-- [ ] Send assets to another wallet
-- [ ] Receive screen with QR Code
-- [ ] DApps integration popups
+### `npm run build`
 
-## License
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The primary license for this repo is `Apache-2.0`, see [`LICENSE`](./LICENSE).
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
