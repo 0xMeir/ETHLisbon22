@@ -25,23 +25,7 @@ async fn ec_recover_and_match_predicate_test() -> Result<(), Error> {
     let mut wallet3 = WalletUnlocked::new_from_private_key(secret_key3, None);
     let receiver = WalletUnlocked::new_random(None);
 
-    let all_coins = [&wallet, &wallet2, &wallet3]
-        .iter()
-        .flat_map(|wallet| {
-            setup_single_asset_coins(wallet.address(), AssetId::default(), 10, 1_000_000)
-        })
-        .collect::<Vec<_>>();
-
-    let (provider, _) = setup_test_provider(
-        all_coins,
-        vec![],
-        Some(Config {
-            predicates: true,
-            utxo_validation: true,
-            ..Config::local_node()
-        }),
-    )
-    .await;
+    let provider = Provider::connect("node-beta-1.fuel.network").await.unwrap();
 
     [&mut wallet, &mut wallet2, &mut wallet3]
         .iter_mut()

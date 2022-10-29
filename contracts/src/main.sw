@@ -4,7 +4,7 @@ predicate;
 // dbg!() for .rs files
 
 use std::{b512::B512, constants::ZERO_B256, ecr::ec_recover_address, inputs::input_predicate_data, prelude::*, logging::log};
-/*
+
 fn get_predicate_input_index() -> u8 {
     asm() {
         gm index i3;
@@ -37,9 +37,9 @@ fn get_tx_id_at_address(address: u64) -> b256 {
     }
 
 }
-*/
+
 fn extract_pulic_key_and_match(signature: B512, expected_public_key: b256) -> u64 {
-    /*let predicate_input_index = get_predicate_input_index();
+    let predicate_input_index = get_predicate_input_index();
     log("1 predicate_input_index:");
     log(predicate_input_index);
     let output_index = get_output_index(predicate_input_index);
@@ -50,7 +50,7 @@ fn extract_pulic_key_and_match(signature: B512, expected_public_key: b256) -> u6
     log(tx_id_memory_address);
     let tx_id_at_address = get_tx_id_at_address(tx_id_memory_address);
     log("4 tx_id_at_address");
-    log(tx_id_at_address);*/
+    log(tx_id_at_address);
     if let Result::Ok(pub_key_sig) = ec_recover_address(signature, ZERO_B256)
     {
         if pub_key_sig.value == expected_public_key {
