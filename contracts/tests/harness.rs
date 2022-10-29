@@ -20,26 +20,43 @@ async fn ec_recover_and_match_predicate_test() -> Result<(), Error> {
             .parse()
             .unwrap();
 
-    let mut wallet = WalletUnlocked::new_from_private_key(secret_key1, None);
-    let mut wallet2 = WalletUnlocked::new_from_private_key(secret_key2, None);
-    let mut wallet3 = WalletUnlocked::new_from_private_key(secret_key3, None);
-    let receiver = WalletUnlocked::new_random(None);
-
     let provider = Provider::connect("node-beta-1.fuel.network").await.unwrap();
 
-    [&mut wallet, &mut wallet2, &mut wallet3]
-        .iter_mut()
-        .for_each(|wallet| wallet.set_provider(provider.clone()));
+    let mut wallet = WalletUnlocked::new_from_private_key(secret_key1, Some(provider.clone()));
+    let mut wallet2 = WalletUnlocked::new_from_private_key(secret_key2, Some(provider.clone()));
+    let mut wallet3 = WalletUnlocked::new_from_private_key(secret_key3, Some(provider.clone()));
+    let receiver = WalletUnlocked::new_random(Some(provider.clone()));
 
     let predicate = Predicate::load_from(
-        "/Users/meir/Desktop/ETHLisbon22/contracts/out/debug/contracts.bin",
+        "out/debug/contracts.bin",
     )?;
 
     let predicate_code = predicate.code();
     let predicate_address = predicate.address();
-    let amount_to_predicate = 1000;
+    let amount_to_predicate = 1;
     let asset_id = AssetId::default();
+    dbg!("predicate address", predicate_address);
 
+/* 
+    dbg!("predicate ", wallet.clone());
+
+    let mut inputs = vec![];
+    let mut outputs = vec![];
+    let input = wallet.get_asset_inputs_for_amount(asset_id, amount_to_predicate, 0).await?;
+    inputs.extend(input);
+
+    let output = wallet.get_asset_outputs_for_amount(predicate_address, asset_id, amount_to_predicate);
+    outputs.extend(output);
+
+    let mut tx = Wallet::build_transfer_tx(&inputs, &outputs, TxParameters::default());
+    wallet.sign_transaction(&mut tx).await?;
+
+    let _receipts = provider.send_transaction(&tx).await?;
+
+    dbg!("receipts", _receipts);
+    */
+
+    /* 
     wallet
         .transfer(
             predicate_address,
@@ -47,8 +64,9 @@ async fn ec_recover_and_match_predicate_test() -> Result<(), Error> {
             asset_id,
             TxParameters::default(),
         )
-        .await?;
-
+        .await?; 
+        */
+ 
     let predicate_balance = provider
         .get_asset_balance(predicate.address(), asset_id)
         .await?;
