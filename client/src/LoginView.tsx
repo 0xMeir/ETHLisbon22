@@ -1,4 +1,4 @@
-export default function LoginForm({ onSubmit }: any) {
+export default function LogiView({ onSubmit }: any) {
     return (
         <>
             <div className="sm:mx-auto sm:w-full sm:max-w-md">
@@ -26,7 +26,7 @@ export default function LoginForm({ onSubmit }: any) {
                             <button
                                 type="button"
                                 onClick={onSubmit}
-                                className="flex w-full justify-center rounded-md border border-transparent bg-emerald-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2"
+                                className="flex w-full justify-center rounded-md border border-transparent bg-emerald-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 transition-all transition-duration-200"
                             >
                                 Login with Fuel ⚡
                             </button>

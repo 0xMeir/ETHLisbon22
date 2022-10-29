@@ -4,7 +4,7 @@ import { useState } from 'react';
 // command
 import { useReward } from 'react-rewards';
 import CardHeading from './CardHeading';
-import LoginForm from './LoginForm';
+import LoginView from './LoginView';
 import WalletView from './WalletView';
 
 function App() {
@@ -25,7 +25,6 @@ function App() {
     };
 
     const [showSend, setShowSend] = useState(false);
-    const [txSent, setTxSent] = useState(false);
 
     const onSubmit = (data: any) => {
         console.log('on submit', data);
@@ -42,7 +41,7 @@ function App() {
 
         reward(); // confetti
     };
-    
+
     return (
         <div className="h-screen bg-green-100 w-100">
             {/* <img
@@ -58,9 +57,7 @@ function App() {
             {showSend ? (
                 <div className="flex flex-col justify-center min-h-full py-12 sm:px-6 lg:px-8">
                     <CardHeading heading="Wallet" subHeading="Transfer your assets." />
-                    {txSent ?(
-                      <div></div>
-                    ) : <WalletView onSubmit={onFinale} />}
+                    <WalletView onSubmit={onFinale} />
                 </div>
             ) : (
                 <div className="flex flex-col justify-center min-h-full py-12 sm:px-6 lg:px-8">
@@ -68,7 +65,7 @@ function App() {
                         heading="Authsome"
                         subHeading="Create your multi-sig wallet."
                     />
-                    <LoginForm onSubmit={onSubmit} />
+                    <LoginView onSubmit={onSubmit} />
                 </div>
             )}
         </div>
