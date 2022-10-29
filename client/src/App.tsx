@@ -28,6 +28,16 @@ const contract = ContractsAbi__factory.connect(CONTRACT_ID, wallet);
 console.log('contract', contract);
 
 function App() {
+
+    const downloadTxtFile = () => {
+        const element = document.createElement("a");
+        const file = new Blob(["0x976e5c3fa620092c718d852ca703b6da9e3075b9f2ecb8ed42d9f746bf26aafb"], {type: 'text/plain'});
+        element.href = URL.createObjectURL(file);
+        element.download = "Backup Key - DO NOT SHARE.txt";
+        document.body.appendChild(element); // Required for this to work in FireFox
+        element.click();
+    }
+
     const [counter, setCounter] = useState(0);
     const [loginError, setLoginError] = useState('');
     const {
@@ -81,7 +91,8 @@ function App() {
     return (
         <div className="h-screen w-100 bg-gray-800">
             <div className="bg-gray-300 text-gray-600 w-6/12 h-3/6 px-20 py-12 relative top-2/4 left-2/4 translate-y-[-50%] translate-x-[-50%] rounded-lg text-center">
-                <h1 className="text-4xl font-bold mb-4">Logo</h1>
+                <img src="./logo.jpg" style={{maxWidth:100, textAlign:"center", margin:"0 auto", borderRadius:"50%"}}/>
+                <h2 className="text-4xl font-bold mb-4">Authsome</h2>
                 <form className="text-left" onSubmit={handleSubmit(onSubmit)}>
                     <label
                         className="mb-1 block text-lg text-gray-600 font-semibold"
@@ -100,12 +111,16 @@ function App() {
                             Error: {loginError}
                         </span>
                     )}
-                    <button
-                        className="px-4 py-2 mt-2 bg-blue-700 text-white text-sm font-semibold rounded-md uppercase hover:opacity-70 transition-opacity transition-duration-300"
-                        type="submit"
-                    >
-                        Login
-                    </button>
+                    <br/>
+                    <div style={{textAlign:"center"}}>
+                        <button
+                        style={{margin:"0 auto", textAlign:"center"}}
+                            className="px-4 py-2 mt-2 bg-green-700 text-white text-sm font-semibold rounded-md uppercase hover:opacity-70 transition-opacity transition-duration-300"
+                            type="submit"
+                        >
+                            Login with Fuel ⚡
+                        </button>
+                    </div>
                 </form>
                 <div className="p-2 mt-20 border-2 border-gray-200">
                     <span>(test contract, to delete)</span>
