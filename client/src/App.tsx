@@ -25,13 +25,11 @@ function App() {
     const [showSend, setShowSend] = useState(false);
 
     const onSubmit = (data: any) => {
-        console.log('on submit', data);
         downloadTxtFile(); // download the backup file
         setShowSend(true);
     };
 
     const onFinale = async (data: any) => {
-        console.log('on finale', data);
         const runTx = await fetch('http://localhost:5005/sendtx', {
             method: 'GET', // default, so we can ignore
         });
