@@ -1,7 +1,14 @@
+import { motion } from 'framer-motion';
+
 export default function LogiView({ onSubmit }: any) {
     return (
         <>
-            <div className="sm:mx-auto sm:w-full sm:max-w-md">
+            <motion.div
+                className="sm:mx-auto sm:w-full sm:max-w-md"
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4 }}
+            >
                 <div className="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
                     <form className="space-y-6">
                         <div>
@@ -33,7 +40,7 @@ export default function LogiView({ onSubmit }: any) {
                         </div>
                     </form>
                 </div>
-            </div>
+            </motion.div>
         </>
     );
 }

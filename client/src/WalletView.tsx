@@ -1,11 +1,12 @@
 import { useState } from 'react';
 import { Player, Controls } from '@lottiefiles/react-lottie-player';
+import { motion } from 'framer-motion';
 
 export default function WalletView({ onSubmit }: any) {
     const [address] = useState(
         '0x976e5c3fa620092c718d852ca703b6da9e3075b9f2ecb8ed42d9f746bf26aafb',
     );
-    const [txSent, setTxSent] = useState(true);
+    const [txSent, setTxSent] = useState(false);
     // const [state, setState] = useState({
     //     address: '',
     //     privateKey: '',
@@ -30,10 +31,20 @@ export default function WalletView({ onSubmit }: any) {
 
     return (
         <>
-            <div className="sm:mx-auto sm:w-full sm:max-w-md">
+            <motion.div
+                className="sm:mx-auto sm:w-full sm:max-w-md"
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4 }}
+            >
                 <div className="px-4 py-8 bg-white shadow sm:rounded-lg sm:px-10">
                     {!txSent && (
-                        <div className="flex items-center">
+                        <motion.div
+                            className="flex items-center"
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ duration: 0.4 }}
+                        >
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 fill="none"
@@ -57,7 +68,7 @@ export default function WalletView({ onSubmit }: any) {
                                 '...' +
                                 state.address.slice(-4)} */}
                             </h3>
-                        </div>
+                        </motion.div>
                     )}
                     <div className="mt-6">
                         {txSent ? (
@@ -78,7 +89,11 @@ export default function WalletView({ onSubmit }: any) {
                                 </h3>
                             </div>
                         ) : (
-                            <>
+                            <motion.div
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                transition={{ duration: 0.4 }}
+                            >
                                 <div className="relative">
                                     <div className="absolute inset-0 flex items-center">
                                         <div className="w-full border-t border-gray-300" />
@@ -121,11 +136,16 @@ export default function WalletView({ onSubmit }: any) {
                                         />
                                     </div>
                                 </div>
-                            </>
+                            </motion.div>
                         )}
                         <div>
                             {txSent ? (
-                                <div className="text-center">
+                                <motion.div
+                                    className="text-center"
+                                    initial={{ opacity: 0 }}
+                                    animate={{ opacity: 1 }}
+                                    transition={{ duration: 0.4 }}
+                                >
                                     <button
                                         id="confettiId"
                                         onClick={() => setTxSent(false)}
@@ -148,24 +168,26 @@ export default function WalletView({ onSubmit }: any) {
                                         </svg>
                                         Send another
                                     </button>
-                                </div>
+                                </motion.div>
                             ) : (
-                                <button
+                                <motion.button
                                     id="confettiId"
                                     onClick={() => {
                                         onSubmit();
                                         setTxSent(true);
                                     }}
                                     className="inline-flex items-center rounded-md justify-center border-transparent bg-emerald-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2  transition-all transition-duration-200"
-                                    // className="flex w-full justify-center rounded-md border border-transparent bg-emerald-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2"
+                                    initial={{ opacity: 0 }}
+                                    animate={{ opacity: 1 }}
+                                    transition={{ duration: 0.1 }}
                                 >
                                     Send transaction ⚡
-                                </button>
+                                </motion.button>
                             )}
                         </div>
                     </div>
                 </div>
-            </div>
+            </motion.div>
         </>
     );
 }
