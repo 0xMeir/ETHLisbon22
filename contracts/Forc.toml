@@ -1,0 +1,7 @@
+[project]
+authors = ["Jeffrey Gatbonton"]
+entry = "main.sw"
+license = "Apache-2.0"
+name = "contracts"
+
+[dependencies]
