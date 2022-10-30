@@ -52,7 +52,7 @@ function App() {
             /> */}
             {showSend ? (
                 <div className="flex flex-col justify-center min-h-full py-12 sm:px-6 lg:px-8">
-                    <CardHeading heading="Wallet" subHeading="Transfer your assets." />
+                    <CardHeading heading="Authsome" subHeading="Transfer your assets." />
                     <WalletView onSubmit={onFinale} />
                 </div>
             ) : (
