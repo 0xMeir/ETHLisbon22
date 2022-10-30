@@ -121,7 +121,7 @@
   blob_garbage_collection_force_threshold=1.000000
   enable_blob_files=false
   level0_slowdown_writes_trigger=20
-  compression=kLZ4Compression
+  compression=kNoCompression
   level0_file_num_compaction_trigger=4
   blob_file_size=268435456
   prefix_extractor=nullptr
@@ -219,7 +219,7 @@
   blob_garbage_collection_force_threshold=1.000000
   enable_blob_files=false
   level0_slowdown_writes_trigger=20
-  compression=kLZ4Compression
+  compression=kNoCompression
   level0_file_num_compaction_trigger=4
   blob_file_size=268435456
   prefix_extractor=nullptr
@@ -317,7 +317,7 @@
   blob_garbage_collection_force_threshold=1.000000
   enable_blob_files=false
   level0_slowdown_writes_trigger=20
-  compression=kLZ4Compression
+  compression=kNoCompression
   level0_file_num_compaction_trigger=4
   blob_file_size=268435456
   prefix_extractor=nullptr
@@ -415,7 +415,7 @@
   blob_garbage_collection_force_threshold=1.000000
   enable_blob_files=false
   level0_slowdown_writes_trigger=20
-  compression=kLZ4Compression
+  compression=kNoCompression
   level0_file_num_compaction_trigger=4
   blob_file_size=268435456
   prefix_extractor=nullptr
@@ -513,7 +513,7 @@
   blob_garbage_collection_force_threshold=1.000000
   enable_blob_files=false
   level0_slowdown_writes_trigger=20
-  compression=kLZ4Compression
+  compression=kNoCompression
   level0_file_num_compaction_trigger=4
   blob_file_size=268435456
   prefix_extractor=nullptr
@@ -611,7 +611,7 @@
   blob_garbage_collection_force_threshold=1.000000
   enable_blob_files=false
   level0_slowdown_writes_trigger=20
-  compression=kLZ4Compression
+  compression=kNoCompression
   level0_file_num_compaction_trigger=4
   blob_file_size=268435456
   prefix_extractor=nullptr
@@ -709,7 +709,7 @@
   blob_garbage_collection_force_threshold=1.000000
   enable_blob_files=false
   level0_slowdown_writes_trigger=20
-  compression=kLZ4Compression
+  compression=kNoCompression
   level0_file_num_compaction_trigger=4
   blob_file_size=268435456
   prefix_extractor=nullptr
@@ -807,7 +807,7 @@
   blob_garbage_collection_force_threshold=1.000000
   enable_blob_files=false
   level0_slowdown_writes_trigger=20
-  compression=kLZ4Compression
+  compression=kNoCompression
   level0_file_num_compaction_trigger=4
   blob_file_size=268435456
   prefix_extractor=nullptr
@@ -905,10 +905,10 @@
   blob_garbage_collection_force_threshold=1.000000
   enable_blob_files=false
   level0_slowdown_writes_trigger=20
-  compression=kLZ4Compression
+  compression=kNoCompression
   level0_file_num_compaction_trigger=4
   blob_file_size=268435456
-  prefix_extractor=nullptr
+  prefix_extractor=rocksdb.FixedPrefix.32
   max_bytes_for_level_multiplier=10.000000
   write_buffer_size=67108864
   disable_auto_compactions=false
@@ -1003,7 +1003,7 @@
   blob_garbage_collection_force_threshold=1.000000
   enable_blob_files=false
   level0_slowdown_writes_trigger=20
-  compression=kLZ4Compression
+  compression=kNoCompression
   level0_file_num_compaction_trigger=4
   blob_file_size=268435456
   prefix_extractor=nullptr
@@ -1101,7 +1101,7 @@
   blob_garbage_collection_force_threshold=1.000000
   enable_blob_files=false
   level0_slowdown_writes_trigger=20
-  compression=kLZ4Compression
+  compression=kNoCompression
   level0_file_num_compaction_trigger=4
   blob_file_size=268435456
   prefix_extractor=nullptr
@@ -1199,10 +1199,10 @@
   blob_garbage_collection_force_threshold=1.000000
   enable_blob_files=false
   level0_slowdown_writes_trigger=20
-  compression=kLZ4Compression
+  compression=kNoCompression
   level0_file_num_compaction_trigger=4
   blob_file_size=268435456
-  prefix_extractor=nullptr
+  prefix_extractor=rocksdb.FixedPrefix.32
   max_bytes_for_level_multiplier=10.000000
   write_buffer_size=67108864
   disable_auto_compactions=false
@@ -1297,7 +1297,7 @@
   blob_garbage_collection_force_threshold=1.000000
   enable_blob_files=false
   level0_slowdown_writes_trigger=20
-  compression=kLZ4Compression
+  compression=kNoCompression
   level0_file_num_compaction_trigger=4
   blob_file_size=268435456
   prefix_extractor=nullptr
@@ -1395,7 +1395,7 @@
   blob_garbage_collection_force_threshold=1.000000
   enable_blob_files=false
   level0_slowdown_writes_trigger=20
-  compression=kLZ4Compression
+  compression=kNoCompression
   level0_file_num_compaction_trigger=4
   blob_file_size=268435456
   prefix_extractor=nullptr
@@ -1493,7 +1493,7 @@
   blob_garbage_collection_force_threshold=1.000000
   enable_blob_files=false
   level0_slowdown_writes_trigger=20
-  compression=kLZ4Compression
+  compression=kNoCompression
   level0_file_num_compaction_trigger=4
   blob_file_size=268435456
   prefix_extractor=nullptr
@@ -1591,7 +1591,7 @@
   blob_garbage_collection_force_threshold=1.000000
   enable_blob_files=false
   level0_slowdown_writes_trigger=20
-  compression=kLZ4Compression
+  compression=kNoCompression
   level0_file_num_compaction_trigger=4
   blob_file_size=268435456
   prefix_extractor=nullptr
@@ -1689,7 +1689,7 @@
   blob_garbage_collection_force_threshold=1.000000
   enable_blob_files=false
   level0_slowdown_writes_trigger=20
-  compression=kLZ4Compression
+  compression=kNoCompression
   level0_file_num_compaction_trigger=4
   blob_file_size=268435456
   prefix_extractor=nullptr
@@ -1787,7 +1787,7 @@
   blob_garbage_collection_force_threshold=1.000000
   enable_blob_files=false
   level0_slowdown_writes_trigger=20
-  compression=kLZ4Compression
+  compression=kNoCompression
   level0_file_num_compaction_trigger=4
   blob_file_size=268435456
   prefix_extractor=nullptr
@@ -1885,7 +1885,7 @@
   blob_garbage_collection_force_threshold=1.000000
   enable_blob_files=false
   level0_slowdown_writes_trigger=20
-  compression=kLZ4Compression
+  compression=kNoCompression
   level0_file_num_compaction_trigger=4
   blob_file_size=268435456
   prefix_extractor=nullptr
@@ -1983,7 +1983,7 @@
   blob_garbage_collection_force_threshold=1.000000
   enable_blob_files=false
   level0_slowdown_writes_trigger=20
-  compression=kLZ4Compression
+  compression=kNoCompression
   level0_file_num_compaction_trigger=4
   blob_file_size=268435456
   prefix_extractor=nullptr
