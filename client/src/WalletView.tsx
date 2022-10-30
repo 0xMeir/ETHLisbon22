@@ -116,6 +116,7 @@ export default function WalletView({ onSubmit }: any) {
                                             id="amount"
                                             name="amount"
                                             placeholder="0.00"
+                                            autoComplete="off"
                                             type="text"
                                             className="mt-1 block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-emerald-500 focus:outline-none focus:ring-emerald-500 sm:text-sm"
                                         />
@@ -131,6 +132,7 @@ export default function WalletView({ onSubmit }: any) {
                                             id="amount"
                                             name="amount"
                                             placeholder="0x00000000000000000..."
+                                            autoComplete="off"
                                             type="text"
                                             className="mt-1 block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-emerald-500 focus:outline-none focus:ring-emerald-500 sm:text-sm"
                                         />
@@ -176,7 +178,7 @@ export default function WalletView({ onSubmit }: any) {
                                         onSubmit();
                                         setTxSent(true);
                                     }}
-                                    className="inline-flex items-center rounded-md justify-center border-transparent bg-emerald-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2  transition-all transition-duration-200"
+                                    className="inline-flex  w-full justify-center items-center rounded-md justify-center border-transparent bg-emerald-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2  transition-all transition-duration-200"
                                     initial={{ opacity: 0 }}
                                     animate={{ opacity: 1 }}
                                     transition={{ duration: 0.1 }}
